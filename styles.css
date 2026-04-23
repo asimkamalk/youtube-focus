@@ -20,6 +20,13 @@ html.yt-focus-on.yt-focus-watch #primary.ytd-watch-flexy {
   width: 100% !important;
 }
 
+/* Center metadata bar content */
+html.yt-focus-on.yt-focus-watch ytd-watch-metadata {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
 /* Comments */
 html.yt-focus-on.yt-focus-watch #comments,
 html.yt-focus-on.yt-focus-watch ytd-comments {
