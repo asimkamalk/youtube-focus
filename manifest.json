@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Focus - No Distraction",
+  "version": "1.0",
+  "description": "Removes distracting elements from YouTube: recommendations, shorts, comments, and more.",
+  "author": "Asim Kamal",
+  "homepage_url": "https://github.com/asimkamalk/",
+  "permissions": ["storage"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Focus",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}

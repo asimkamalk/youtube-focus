@@ -1,0 +1,80 @@
+/* ============================================
+   YouTube Focus - Hide Distractions on Watch Pages
+   All rules require both .yt-focus-on AND .yt-focus-watch
+   The classes are added by content.js only when:
+   - The extension is enabled (yt-focus-on)
+   - The user is on a /watch page (yt-focus-watch)
+   ============================================ */
+
+/* Sidebar recommendations */
+html.yt-focus-on.yt-focus-watch #related,
+html.yt-focus-on.yt-focus-watch ytd-watch-next-secondary-results-renderer,
+html.yt-focus-on.yt-focus-watch #secondary,
+html.yt-focus-on.yt-focus-watch #secondary-inner {
+  display: none !important;
+}
+
+/* Expand video to full width when sidebar is hidden */
+html.yt-focus-on.yt-focus-watch #primary.ytd-watch-flexy {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Comments */
+html.yt-focus-on.yt-focus-watch #comments,
+html.yt-focus-on.yt-focus-watch ytd-comments {
+  display: none !important;
+}
+
+/* End-screen cards & pause overlays */
+html.yt-focus-on.yt-focus-watch .ytp-endscreen-content,
+html.yt-focus-on.yt-focus-watch .ytp-ce-element,
+html.yt-focus-on.yt-focus-watch .ytp-cards-teaser,
+html.yt-focus-on.yt-focus-watch .ytp-ce-covering-overlay,
+html.yt-focus-on.yt-focus-watch .ytp-ce-element-shadow,
+html.yt-focus-on.yt-focus-watch .ytp-cards-button,
+html.yt-focus-on.yt-focus-watch .iv-branding,
+html.yt-focus-on.yt-focus-watch .annotation,
+html.yt-focus-on.yt-focus-watch .ytp-pause-overlay {
+  display: none !important;
+}
+
+/* Live chat */
+html.yt-focus-on.yt-focus-watch ytd-live-chat-frame,
+html.yt-focus-on.yt-focus-watch #chat {
+  display: none !important;
+}
+
+/* Merch / product shelves */
+html.yt-focus-on.yt-focus-watch ytd-merch-shelf-renderer,
+html.yt-focus-on.yt-focus-watch ytd-product-details-renderer {
+  display: none !important;
+}
+
+/* Ask + Download buttons */
+html.yt-focus-on.yt-focus-watch ytd-watch-metadata ytd-download-button-renderer,
+html.yt-focus-on.yt-focus-watch ytd-download-button-renderer,
+html.yt-focus-on.yt-focus-watch button[aria-label="Download" i].yt-spec-button-shape-next,
+html.yt-focus-on.yt-focus-watch yt-button-view-model:has(button[aria-label="Download" i]),
+html.yt-focus-on.yt-focus-watch ytd-watch-metadata ytd-button-renderer:has(button[aria-label*="Ask"]),
+html.yt-focus-on.yt-focus-watch ytd-watch-metadata yt-button-view-model:has(button[aria-label*="Ask"]),
+html.yt-focus-on.yt-focus-watch button[aria-label*="Ask" i].yt-spec-button-shape-next {
+  display: none !important;
+}
+
+/* "...more" description expander */
+html.yt-focus-on.yt-focus-watch ytd-watch-metadata #description-inline-expander,
+html.yt-focus-on.yt-focus-watch ytd-watch-metadata #description,
+html.yt-focus-on.yt-focus-watch tp-yt-paper-button#expand,
+html.yt-focus-on.yt-focus-watch ytd-text-inline-expander {
+  display: none !important;
+}
+
+/* Top-bar clutter: bell, Create button, voice-search mic */
+html.yt-focus-on.yt-focus-watch ytd-notification-topbar-button-renderer,
+html.yt-focus-on.yt-focus-watch #voice-search-button,
+html.yt-focus-on.yt-focus-watch #end ytd-button-renderer:has(button[aria-label="Create"]),
+html.yt-focus-on.yt-focus-watch #end yt-button-shape:has(button[aria-label="Create"]),
+html.yt-focus-on.yt-focus-watch button[aria-label="Search with your voice" i] {
+  display: none !important;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>YouTube Focus</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 280px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      padding: 18px;
+    }
+    h1 {
+      font-size: 16px;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .subtitle {
+      font-size: 11px;
+      color: #aaa;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .master {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      background: #1a1a1a;
+      border-radius: 10px;
+      cursor: pointer;
+      user-select: none;
+      border: 1px solid #2a2a2a;
+    }
+    .master-text { display: flex; flex-direction: column; gap: 3px; }
+    .master-title { font-size: 15px; font-weight: 600; }
+    .master-status { font-size: 11px; color: #aaa; }
+
+    input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .switch {
+      position: relative;
+      width: 44px;
+      height: 24px;
+      background: #444;
+      border-radius: 24px;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .switch::before {
+      content: "";
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      top: 3px;
+      background: #fff;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+    input[type="checkbox"]:checked ~ .switch { background: #ff0000; }
+    input[type="checkbox"]:checked ~ .switch::before { transform: translateX(20px); }
+
+    .info {
+      margin-top: 14px;
+      padding: 10px 12px;
+      background: #1a1a1a;
+      border-radius: 8px;
+      font-size: 11px;
+      color: #aaa;
+      line-height: 1.5;
+    }
+    .info b { color: #fff; }
+
+    .footer {
+      margin-top: 14px;
+      font-size: 11px;
+      color: #555;
+      text-align: center;
+    }
+    .footer a { color: #888; text-decoration: none; }
+    .footer a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+  <h1>🎯 YouTube Focus</h1>
+  <div class="subtitle">Hides distractions <b style="color:#fff">only while watching videos</b>. Homepage and search stay normal.</div>
+
+  <label class="master">
+    <div class="master-text">
+      <span class="master-title">Focus mode</span>
+      <span class="master-status" id="status">Loading…</span>
+    </div>
+    <input type="checkbox" id="master">
+    <span class="switch"></span>
+  </label>
+
+  <div class="info">
+    <b>Hides on video pages:</b> sidebar recommendations, comments, end-screen cards, merch, live chat, Ask/Download buttons, "…more" description, voice search mic, notifications bell, Create button.
+  </div>
+
+  <div class="footer">
+    Developed by <a href="https://github.com/asimkamalk/" target="_blank">Asim Kamal</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
