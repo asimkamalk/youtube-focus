@@ -27,6 +27,20 @@ html.yt-focus-on.yt-focus-watch ytd-watch-metadata {
   justify-content: center !important;
 }
 
+/* Hide touch feedback and generic metadata wrappers */
+html.yt-focus-on.yt-focus-watch ytd-watch-metadata .yt-spec-touch-feedback-shape-fill,
+html.yt-focus-on.yt-focus-watch ytd-watch-metadata .style-scope.ytd-watch-metadata {
+  display: none !important;
+}
+
+/* Center the metadata item element */
+html.yt-focus-on.yt-focus-watch ytd-watch-metadata .item.style-scope.ytd-watch-metadata {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+}
+
 /* Comments */
 html.yt-focus-on.yt-focus-watch #comments,
 html.yt-focus-on.yt-focus-watch ytd-comments {
